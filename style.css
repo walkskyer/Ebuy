@@ -294,7 +294,7 @@ margin:0px auto;
 }
 
 #blogname{
-width:400px;
+width:200px;
 float:left;	
 }
 
@@ -317,11 +317,10 @@ font-weight:normal;
 
 
 .topbar{
-	width:468px;
-	height:60px;
-	background:#ddd;
+	width:768px;
+	height:90px;
 	float:right;
-	margin:30px 0px 0px 0px;
+	margin:30px 0px 2px 0px;
 }
 
 /* TOP-MENU */
