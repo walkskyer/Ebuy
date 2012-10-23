@@ -23,7 +23,7 @@
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
 					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
-					title="" target="_blank"> 去淘宝购买 </a>
+					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
 
@@ -36,7 +36,7 @@
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
 					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
-					title="" target="_blank"> 去淘宝购买 </a>
+					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
 			<div class="petmeta"> <?php echo get_the_term_list( $post->ID, 'product', '', ', ', '' ); ?></div>
@@ -48,7 +48,7 @@
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
 					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
-					title="" target="_blank"> 去淘宝购买 </a>
+					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
 		</div>
