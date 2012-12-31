@@ -17,16 +17,15 @@
 <?php } else { ?>
 	<img class="boximg"
 				src="<?php bloginfo('template_directory'); ?>/images/dummy.png"
-				alt="" />
+				alt=""  width="200px" height="150px" />
 <?php } ?>
 			<div class="boxmeta clearfix">
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
-					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
+					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".base64_encode(urlencode($purchase));}else{echo $purchase;} ?>"
 					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
-
 		</div>
 		<div class="pro-cover">
 			<div class="title">
@@ -35,7 +34,7 @@
 			<div class="boxmeta clearfix">
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
-					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
+					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".base64_encode(urlencode($purchase));}else{echo $purchase;} ?>"
 					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
@@ -47,7 +46,7 @@
 			<div class="boxmeta clearfix">
 				<span class="p-cost"> &yen;<?php $cost=get_post_meta($post->ID, 'wtf_cost', true); echo $cost; ?> </span>
 				<span class="p-link"> <a
-					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".urlencode($purchase);}else{echo $purchase;} ?>"
+					href="<?php $purchase=get_post_meta($post->ID, 'wtf_purchase', true); include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('wp-noexternallinks/wp-noexternallinks.php')){ echo bloginfo('url')."/?goto=".base64_encode(urlencode($purchase));}else{echo $purchase;} ?>"
 					title="" target="_blank" rel="nofollow"> 去淘宝购买 </a>
 				</span>
 			</div>
@@ -71,7 +70,7 @@
 		<!-- end thumbnail area -->
 	</div>
 </div>
-<?php endwhile; ?> 
+<?php endwhile; ?>
 <?php endif; ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
