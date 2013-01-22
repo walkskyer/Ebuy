@@ -4,7 +4,7 @@
 	
 		
 <li>			<?php
-				$mySearch =& new WP_Query("s=$s & showposts=-1");
+				$mySearch =new WP_Query("s=$s & showposts=-1");
 				$num = $mySearch->post_count;
 				echo $num.' 个搜索结果 '; the_search_query();
 			?> 用时 <?php  get_num_queries(); ?> <?php timer_stop(1); ?> 秒.</li>
